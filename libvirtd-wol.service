@@ -1,0 +1,14 @@
+[Unit]
+Description=Libvirtd Wake-On-Lan daemon
+After=libvirt-bin.service network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/libvirtd-wol
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-abnormal
+User=nobody
+Group=libvirt
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[package]
+name = "libvirtd-wol"
+version = "0.1.0"
+authors = ["tamarindsoup <san.jose3993@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { git = "https://github.com/clap-rs/clap/" }
+pcap = "0.7.0"
+quick-xml = "0.18.1"
+eui48 = "1.0.0"
+virt = "0.2.11"
